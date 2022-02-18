@@ -27,20 +27,28 @@ header {
     float: bottom;
 }
 
+nav li {
+    display: none;
+}
+
  /* main part styles */
 
- .welcome {
+
+
+.welcome {
      background-color: beige;
      padding-top: 10%;
      padding-bottom: 10%;
      padding: 50px;
      letter-spacing: 3px;
      line-height: 30px;
+     margin-top: 20px;
+     margin-bottom: 20px;
  }
 
 .full-width-image {
     width: 100%;
-    height: 500px;
+    height: 300px;
     margin-bottom: 20px;
     background-position: center;
     display: flex;
@@ -62,6 +70,7 @@ header {
 .multi article {
     height: 538px;
     width: 49%;
+    margin-top: 10px;
     margin-bottom: 20px;
     background-position: center;
     text-align: center;
@@ -94,3 +103,118 @@ header {
 
 /* footer styles */
 
+#containfooter {
+    background-color: #A1CDCE;
+    color: purple;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    width: 100%;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.contact {
+    width: 50%;
+    position: relative;
+}
+
+#containfooter .social-links {
+    width: 50%;
+    position:relative;
+}
+
+#containfooter .social-links li {
+    display: inline-block;
+    font-size: 14px;
+}
+
+/*media queries */
+
+@media screen and (min-width: 540px) {
+
+}
+
+@media screen and (min-width: 900px) {
+
+    #navbar {
+        background-color: #218B82;
+        color: white;
+        padding: 10px;
+        margin-top: 20px;
+        text-align: right;
+    }
+
+    #navbar li {
+        text-decoration: none;
+        display: inline;
+        font-size: 16px;
+        vertical-align: middle;
+        margin-left: 20px;
+    }
+
+    #navbar li a:hover {
+        background-color: #98D4BB;
+        padding: 10px;
+        color: white;
+
+    }
+
+    .about {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+
+    }
+
+
+    .full-width-image {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px;
+        align-items:flex-start;
+        background-image: url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F34%2F2017%2F08%2F10%2Fcarolyn-will-wedding-cake-707-6343625-0617-2000.jpg");
+    }
+
+    .welcome {
+        background-color: beige;
+        align-items: flex-end;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        padding: 50px;
+        letter-spacing: 3px;
+        line-height: 30px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+
+    .multi {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    .multi article {
+        text-align: center;
+        margin: 10px;
+        margin-bottom: 20px;
+    }
+}
