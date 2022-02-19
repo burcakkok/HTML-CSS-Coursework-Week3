@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
 /* header styles */
 
 header {
@@ -14,17 +17,23 @@ header {
     padding: 50px;
 }
 
-.title img {
-    text-align: left;
-    float: top;
-    max-width:100%;
-    height: 150px;
+.title {
+    display: flex;
+    flex-direction: row;
 }
 
-.title p {
+.title img {
+    text-align: left;
+    max-width:100%;
+    height: 80px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+.title div {
     text-align: right;
-    font-size: 20px;
-    float: bottom;
+    font-size: 13px;
+    align-self: flex-end;
 }
 
 nav li {
@@ -33,30 +42,26 @@ nav li {
 
  /* main part styles */
 
+.welcomeflex {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
+}
 
 .welcome {
      background-color: beige;
      padding-top: 10%;
      padding-bottom: 10%;
      padding: 50px;
-     letter-spacing: 3px;
      line-height: 30px;
-     margin-top: 20px;
-     margin-bottom: 20px;
  }
 
 .full-width-image {
     width: 100%;
-    height: 300px;
-    margin-bottom: 20px;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-position: center;
-    background-size: cover;
-    background-image: url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F34%2F2017%2F08%2F10%2Fcarolyn-will-wedding-cake-707-6343625-0617-2000.jpg");
+    height: auto;
 
 }
 
@@ -103,44 +108,28 @@ nav li {
 
 /* footer styles */
 
-#containfooter {
-    background-color: #A1CDCE;
-    color: purple;
-}
-
-.container {
-    position: relative;
-    width: 100%;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.inner {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.row {
-    width: 100%;
-    position: relative;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
 
 .contact {
-    width: 50%;
-    position: relative;
+    background-color: #A1CDCE;
+    color: purple;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact p {
+    flex-grow: 1;
+    font-size: 10px;
 }
 
 #containfooter .social-links {
-    width: 50%;
-    position:relative;
+    flex-grow: 1;
 }
 
 #containfooter .social-links li {
     display: inline-block;
-    font-size: 14px;
+    font-size: 8px;
 }
 
 /*media queries */
@@ -151,6 +140,20 @@ nav li {
 
 @media screen and (min-width: 900px) {
 
+    .title img {
+        text-align: left;
+        max-width:100%;
+        height: 100px;
+        padding: 0;
+    }
+    
+    .title div {
+        text-align: right;
+        font-size: 13px;
+        align-self: flex-end;
+        flex-grow: 1;
+    }
+
     #navbar {
         background-color: #218B82;
         color: white;
@@ -160,46 +163,41 @@ nav li {
     }
 
     #navbar li {
-        text-decoration: none;
         display: inline;
         font-size: 16px;
         vertical-align: middle;
         margin-left: 20px;
     }
 
+    #navbar li a {
+        color: white;
+    }
+
     #navbar li a:hover {
         background-color: #98D4BB;
         padding: 10px;
-        color: white;
 
     }
 
-    .about {
+    .welcomeflex {
         display: flex;
         flex-direction: row-reverse;
-        align-items: center;
+        align-items: stretch;
 
     }
-
 
     .full-width-image {
-        width: 100%;
-        height: 200px;
-        margin-bottom: 20px;
-        align-items:flex-start;
-        background-image: url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F34%2F2017%2F08%2F10%2Fcarolyn-will-wedding-cake-707-6343625-0617-2000.jpg");
+        height: 370px;
+        width: auto;
     }
+
 
     .welcome {
         background-color: beige;
-        align-items: flex-end;
         padding-top: 10%;
-        padding-bottom: 10%;
         padding: 50px;
         letter-spacing: 3px;
         line-height: 30px;
-        margin-top: 20px;
-        margin-bottom: 20px;
     }
 
 
@@ -216,5 +214,10 @@ nav li {
         text-align: center;
         margin: 10px;
         margin-bottom: 20px;
+    }
+
+    .contact {
+        flex-direction: row;
+        justify-content: center;
     }
 }
