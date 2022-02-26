@@ -1,1 +1,307 @@
-/*  Add your styling here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+/* header styles */
+
+header {
+    background-color: #EB96AA;
+    vertical-align: top;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding: 50px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+}
+
+.title img {
+    text-align: left;
+    max-width:100%;
+    height: 80px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+.title div {
+    text-align: right;
+    font-size: 13px;
+    align-self: flex-end;
+}
+
+nav li {
+    display: none;
+}
+
+ /* main part styles */
+
+.welcomeflex {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.welcome {
+     background-color: beige;
+     padding-top: 10%;
+     padding-bottom: 10%;
+     padding: 50px;
+     line-height: 30px;
+ }
+
+.full-width-image {
+    width: 100%;
+    height: auto;
+
+}
+
+.multi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.multi article {
+    height: 300px;
+    width: 49%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-position: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.small-cake {
+    background-image: url("https://cravingsjournal.com/wp-content/uploads/2020/02/mini-red-velvet-cake-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.piece-of-cake {
+    background-image: url("https://sugargeekshow.com/wp-content/uploads/2020/03/rainbow-cake-featured-2048x2048.jpg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cup-cake {
+    background-image: url("https://images.unsplash.com/photo-1599785209707-a456fc1337bb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.donut {
+    background-image: url("https://ohsweetbasil.com/wp-content/uploads/worlds-best-cinnamon-roll-recipe-16-scaled.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* footer styles */
+
+
+.contact {
+    background-color: #A1CDCE;
+    color: purple;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact p {
+    flex-grow: 1;
+    font-size: 10px;
+}
+
+#containfooter .social-links {
+    flex-grow: 1;
+}
+
+#containfooter .social-links li {
+    display: inline-block;
+    font-size: 8px;
+}
+
+/*media queries */
+
+@media screen and (min-width: 540px) {
+
+    .title img {
+        text-align: left;
+        max-width:100%;
+        height: 100px;
+        padding: 0;
+    }
+    
+    .title div {
+        text-align: right;
+        font-size: 13px;
+        align-self: flex-end;
+        flex-grow: 1;
+    }
+
+    #navbar {
+        background-color: #218B82;
+        color: white;
+        padding: 10px;
+        margin-top: 20px;
+        text-align: right;
+    }
+
+    #navbar li {
+        display: inline;
+        font-size: 16px;
+        vertical-align: middle;
+        margin-left: 20px;
+    }
+
+    #navbar li a {
+        color: white;
+    }
+
+    #navbar li a:hover {
+        background-color: #98D4BB;
+        padding: 10px;
+
+    }
+
+    .multi {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    .multi article {
+        text-align: center;
+        margin: 10px;
+        margin-bottom: 20px;
+    }
+
+    .contact {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .contact p {
+        font-size: 15px;
+    }
+
+    #containfooter .social-links li {
+        font-size: 15px;
+    }
+
+
+
+}
+
+@media screen and (min-width: 900px) {
+
+    .title img {
+        text-align: left;
+        max-width:100%;
+        height: 100px;
+        padding: 0;
+    }
+    
+    .title div {
+        text-align: right;
+        font-size: 13px;
+        align-self: flex-end;
+        flex-grow: 1;
+    }
+
+    #navbar {
+        background-color: #218B82;
+        color: white;
+        padding: 10px;
+        margin-top: 20px;
+        text-align: right;
+    }
+
+    #navbar li {
+        display: inline;
+        font-size: 16px;
+        vertical-align: middle;
+        margin-left: 20px;
+    }
+
+    #navbar li a {
+        color: white;
+    }
+
+    #navbar li a:hover {
+        background-color: #98D4BB;
+        padding: 10px;
+
+    }
+
+    .welcomeflex {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: stretch;
+
+    }
+
+    .full-width-image {
+        height: 370px;
+        width: auto;
+        padding-top: 0;
+    }
+
+
+    .welcome {
+        background-color: beige;
+        padding-top: 10%;
+        padding: 50px;
+        letter-spacing: 3px;
+        line-height: 30px;
+    }
+
+
+    .multi {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    .multi article {
+        text-align: center;
+        margin: 10px;
+        margin-bottom: 20px;
+    }
+
+    .contact {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .contact p {
+        font-size: 15px;
+    }
+
+    #containfooter .social-links li {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .full-width-image {
+        height: 300px;
+    }
+}
