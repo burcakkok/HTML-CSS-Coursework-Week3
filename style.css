@@ -175,34 +175,6 @@ nav li {
 
     }
 
-    .welcomeflex {
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: stretch;
-        background-color: beige;
-
-    }
-
-    .full-width-image {
-        height: 480px;
-        width: auto;
-        align-items: center;
-        padding-top: 10px;
-    }
-
-
-    .welcome {
-        background-color: beige;
-        padding-top: 10%;
-        padding: 50px;
-        letter-spacing: 3px;
-        line-height: 30px;
-        max-height: 480px;
-        overflow: auto;
-    }
-
-
-
     .multi {
         display: flex;
         flex-direction: row;
@@ -325,5 +297,11 @@ nav li {
 
     #containfooter .social-links li {
         font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .full-width-image {
+        height: 300px;
     }
 }
